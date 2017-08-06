@@ -97,10 +97,8 @@ int main()
 	int sb[]={1, 0, 1, 2, 1, 4};
 	n=6;
 	std::vector<int> s2(sb,sb+n);
-    print_match(three_sum(s2,6,0));	
+        print_match(three_sum(s2,6,0));	
 	//sould print nothing or ()
-
-
 
 	return 0;
 };
