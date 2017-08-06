@@ -78,8 +78,9 @@ void print_match(std::set<std::vector<int> > pair_list)
         {
             cout<<*num<<" ";
         }
-        cout<<") "<<endl;
+        cout<<") ";
     }
+	cout<<endl;
 }
 
 
@@ -91,15 +92,23 @@ int main()
 	int n=6;
 	std::vector<int> s1(s,s+n); 
 	std::set<std::vector<int> > ans1=three_sum(s1,6,0);
+	cout<<"{-1, 0, 1, 2, -1, -4} =";
 	print_match(ans1);
 	//should print (-1  1  0  ) (-1  2  -1  )
 
 	int sb[]={1, 0, 1, 2, 1, 4};
 	n=6;
 	std::vector<int> s2(sb,sb+n);
+	cout<<"{1, 0, 1, 2, 1, 4} =";
     print_match(three_sum(s2,6,0));	
 	//sould print nothing or ()
 
+    int sc[]={0,0,0,0,0,0,0,0};
+    n=8;
+    std::vector<int> s3(sc,sc+n);
+	cout<<"{0,0,0,0,0,0,0,0} =";
+    print_match(three_sum(s3,n,0));
+    //sould print (0 0 0)
 
 
 	return 0;
